@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabla de Multiplicar</title>
+</head>
+<body>
+  <label for="numeroInput">Ingresa un número:</label>
+  <input type="number" id="numeroInput">
+  <button id="mostrarTabla">Mostrar Tabla</button>
+
+  <script>
+    // Obtener el elemento de entrada de número y el botón
+    const numeroInput = document.getElementById('numeroInput');
+    const mostrarTablaBtn = document.getElementById('mostrarTabla');
+
+    // Agregar un evento click al botón
+    mostrarTablaBtn.addEventListener('click', function() {
+      // Obtener el número ingresado por el usuario
+      const numero = parseInt(numeroInput.value);
+
+      // Verificar si se ingresó un número válido
+      if (!isNaN(numero)) {
+        // Mostrar la tabla de multiplicar en la consola
+        console.log(`Tabla de multiplicar del ${numero}:`);
+        for (let i = 1; i <= 10; i++) {
+          console.log(`${numero} x ${i} = ${numero * i}`);
+        }
+      } else {
+        console.log('Por favor, ingresa un número válido.');
+      }
+    });
+  </script>
+</body>
+</html>

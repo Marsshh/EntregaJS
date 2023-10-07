@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Input de Texto</title>
+</head>
+<body>
+  <label for="textoInput">Ingresa un texto:</label>
+  <input type="text" id="textoInput">
+  <button id="mostrarTexto">Mostrar Texto</button>
+
+  <script>
+    // Obtener el elemento de entrada de texto y el botón
+    const textoInput = document.getElementById('textoInput');
+    const mostrarTextoBtn = document.getElementById('mostrarTexto');
+
+    // Agregar un evento click al botón
+    mostrarTextoBtn.addEventListener('click', function() {
+      // Obtener el valor del input de texto
+      const textoIngresado = textoInput.value;
+
+      // Mostrar una alerta con el texto ingresado
+      alert('Texto ingresado: ' + textoIngresado);
+    });
+  </script>
+</body>
+</html>
